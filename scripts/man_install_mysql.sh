@@ -1,6 +1,6 @@
 #!/bin/bash
 
-scp install_mysql.sh mscu@$1:/tmp
-scp /etc/hosts mscu@$1:/tmp
-ssh mscu@$1 "sudo cp /tmp/hosts /etc/hosts"
-ssh mscu@$1 "sudo /tmp/install_mysql.sh"
+scp ./scripts/install_mysql.sh $1:/tmp
+scp /etc/hosts $1:/tmp
+ssh $1 "sudo cp /tmp/hosts /etc/hosts"
+ssh $1 "sudo /tmp/install_mysql.sh"

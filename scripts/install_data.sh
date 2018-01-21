@@ -12,9 +12,9 @@ systemctl stop firewall
 
 #install MySQL Binaries
 echo "install MySQL binaries"
-rpm -Uvh /tmp/mysql/MySQL-Cluster-client-gpl-7.4.10-1.el7.x86_64.rpm
-rpm -Uvh /tmp/mysql/MySQL-Cluster-server-gpl-7.4.10-1.el7.x86_64.rpm
-rpm -Uvh /tmp/mysql/MySQL-Cluster-shared-gpl-7.4.10-1.el7.x86_64.rpm
+rpm -Uvh /tmp/mysql/MySQL-Cluster-client-gpl-7.5.9-1.el7.x86_64.rpm
+rpm -Uvh /tmp/mysql/MySQL-Cluster-server-gpl-7.5.9-1.el7.x86_64.rpm
+rpm -Uvh /tmp/mysql/MySQL-Cluster-shared-gpl-7.5.9-1.el7.x86_64.rpm
 
 
 #Add Data node configuration
