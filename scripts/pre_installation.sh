@@ -8,7 +8,7 @@ mkdir -p /tmp/mysql
 cd /tmp/mysql
 
 #Downloading MYSQL tarball
-curl -L http://dev.mysql.com/get/Downloads/MySQL-Cluster-7.5/MySQL-Cluster-gpl-7.5.9-1.el7.x86_64.rpm-bundle.tar -o mysql.tar
+curl -L http://dev.mysql.com/get/Downloads/MySQL-Cluster-7.4/MySQL-Cluster-gpl-7.4.10-1.el7.x86_64.rpm-bundle.tar -o mysql.tar
 
 #Extract Tarball
 tar -xvf mysql.tar
