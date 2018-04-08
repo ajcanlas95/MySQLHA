@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Removing and Addning nescessary pacakges
-yum -y install perl-Data-Dumper net-tools
+yum -y install perl-Data-Dumper net-tools libaio
 yum -y remove mariadb-libs
 
 #Set SELinux to permissive
@@ -27,7 +27,7 @@ cat > /var/lib/mysql-cluster/config.ini << "EOF"
 DataDir=/var/lib/mysql-cluster
  
 [ndb_mgmd]
-HostName=master.localhost
+HostName=master
  
 [ndbd default]
 NoOfReplicas=2      # Number of replicas
@@ -37,16 +37,16 @@ IndexMemory=128M    # Memory allocate for index storage
 DataDir=/var/lib/mysql-cluster
 
 [ndbd]
-HostName=data1.localhost
+HostName=data1
  
 [ndbd]
-HostName=data2.localhost
+HostName=data2
  
 [mysqld]
-HostName=mysql1.localhost
+HostName=mysql1
  
 [mysqld]
-HostName=mysql2.localhost
+HostName=mysql2
 EOF
 
 #Start Management Node

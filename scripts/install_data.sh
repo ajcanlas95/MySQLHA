@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Removing and Addning nescessary pacakges
-yum -y install perl-Data-Dumper net-tools
+yum -y install perl-Data-Dumper net-tools libaio
 yum -y remove mariadb-libs
 
 #Set SELinux to permissive
@@ -22,10 +22,10 @@ echo "Add Data node configuration"
 cat > /etc/my.cnf << "EOF"
 [mysqld]
 ndbcluster
-ndb-connectstring=master.localhost
+ndb-connectstring=master
  
 [mysql_cluster]
-ndb-connectstring=master.localhost
+ndb-connectstring=master
 EOF
 
 #Create database directory

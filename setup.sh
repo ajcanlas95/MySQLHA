@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #Download MySQL
-./scripts/pre_installation.sh
+sudo ./scripts/pre_installation.sh
 
 #Installing Management
-./scripts/install_man.sh
+sudo ./scripts/install_man.sh
 
 #Installing Data Nodes
 for i in data{1..2};

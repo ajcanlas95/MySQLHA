@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Removing and Addning nescessary pacakges
-yum -y install perl-Data-Dumper net-tools
+yum -y install perl-Data-Dumper net-tools libaio
 yum -y remove mariadb-libs
 
 #install MySQL Binaries
@@ -22,11 +22,11 @@ cat > /etc/my.cnf << "EOF"
 
 [mysqld]
 ndbcluster
-ndb-connectstring=master.localhost
+ndb-connectstring=master
 default_storage_engine=ndbcluster
  
 [mysql_cluster]
-ndb-connectstring=master.localhost
+ndb-connectstring=master
 EOF
 
 #Create database directory
